@@ -710,6 +710,11 @@ func (self Value) export() interface{} {
 				val.Index(i).Set(reflect.ValueOf(v))
 			}
 			return val.Interface()
+		} else if object.class == classDate {
+			if dateVal, ok := object.value.(_dateObject); ok {
+				return dateVal.time	
+			}
+			return nil
 		} else {
 			result := make(map[string]interface{})
 			// TODO Should we export everything? Or just what is enumerable?
