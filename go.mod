@@ -1,4 +1,4 @@
-module github.com/robertkrimen/otto
+module github.com/spaxfiz/otto
 
 go 1.14
 
@@ -9,3 +9,5 @@ require (
 	gopkg.in/readline.v1 v1.0.0-20160726135117-62c6fe619375
 	gopkg.in/sourcemap.v1 v1.0.5
 )
+
+replace github.com/robertkrimen/otto => github.com/spaxfiz/otto latest
